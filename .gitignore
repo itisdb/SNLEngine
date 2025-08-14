@@ -1,7 +1,3 @@
-# Folders
-.vs
-bin/
-bin-int/
-
-# Files
-*.user
+# Ignore virtual environment directory
+venv/
+*.pyc
