@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Function to clean up background processes
+cleanup() {
+    echo "Stopping processes..."
+    kill $(jobs -p)
+    exit 0
+}
+
+trap cleanup SIGINT SIGTERM
 # --- Backend Setup ---
 echo "Starting backend..."
 cd backend
@@ -16,7 +24,7 @@ echo "Installing dependencies..."
 pip install -r requirements.txt
 
 echo "Starting FastAPI server..."
-uvicorn main:app --reload &
+uvicorn main:app --host 0.0.0.0 --reload &
 
 cd ..
 

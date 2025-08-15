@@ -1,4 +1,5 @@
 fastapi
-uvicorn[standard]
+uvicorn
 firebase-admin
-python-dotenvpython-geohash 
+python-dotenv
+python-geohash 
