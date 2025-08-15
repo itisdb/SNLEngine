@@ -2,3 +2,5 @@
 .idx/
 venv/
 *.pyc
+*credentials.json
+*.env

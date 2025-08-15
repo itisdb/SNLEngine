@@ -1,1 +1,0 @@
-print("FirebaseStudio Working")
